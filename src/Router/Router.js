@@ -1,4 +1,4 @@
-import Navbar from "../Components/Shared/Header/Navbar";
+import Department from "../Components/Department/Department";
 import HomePage from "../Components/Shared/HomePage/HomePage";
 import Main from "../Components/Shared/Main/Main";
 
@@ -10,11 +10,11 @@ export const router = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
-        path: "/nav",
-        element: <Navbar></Navbar>,
+        path: "/Department",
+        element: <Department></Department>,
       },
       {
-        path: "/homepage",
+        path: "HomePage",
         element: <HomePage></HomePage>,
       },
     ],
