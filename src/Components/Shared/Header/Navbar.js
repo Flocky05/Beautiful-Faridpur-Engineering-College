@@ -28,24 +28,24 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a href="Homepage">Home</a>
+                <Link to="/Homepage">Home</Link>
               </li>
               <li>
                 <Link to="/Department">Department</Link>
               </li>
               <li>
-                <a>Teacher's</a>
+                <Link to="/Teacher">Teacher's</Link>
               </li>
               <li>
-                <a>Studnet's</a>
+                <Link to="/Student">Studnet's</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost normal-case text-xl">
+          <Link className="btn btn-ghost normal-case text-xl">
             Faridpur Enginnering College
-          </a>
+          </Link>
         </div>
         <div className="navbar-end">
           <button className="btn btn-ghost btn-circle">
