@@ -1,19 +1,17 @@
 import React from "react";
-import img from "../../../assets/images/fec-115.jpg";
+import video from "../../../assets/video/Faridpur Engineering College.mp4";
 
 const HomePage = () => {
   return (
     <div>
-      <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: `url("https://img.freepik.com/free-photo/aerial-view-residence-bukovinian-dalmatian-metropolitans-chernivtsi-national-university-chernivtsi-touristic-destination-western-ukraine_231208-45.jpg?w=1060&t=st=1674218740~exp=1674219340~hmac=d0724af2ab9c864f4c50a02828cf9b341f7234566871e7f8d4330adb56d65e61")`,
-        }}
-      >
+      <div className="hero">
+        <video autoPlay loop muted playsInline className="w-full">
+          <source src={video} />
+        </video>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-xl">
-            <h1 className="mb-3 text-4xl font-bold hover:text-5xl ">
+            <h1 className="mb-3 text-4xl font-bold">
               Welcome
               <br /> To <br /> Faridpur Engineering College
             </h1>

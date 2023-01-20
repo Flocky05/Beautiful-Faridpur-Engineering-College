@@ -12,9 +12,11 @@ const Department = () => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">EEE Department</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <p>
+            This department is know as their teacher's very student friendly...
+          </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn btn-primary lowercase">Learn More</button>
           </div>
         </div>
       </div>
@@ -24,9 +26,12 @@ const Department = () => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">CE Department</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <p>
+            This Department know as Royal department in all of engineering
+            College...
+          </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn btn-primary lowercase">Learn More</button>
           </div>
         </div>
       </div>
@@ -36,9 +41,11 @@ const Department = () => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">CSE Department</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <p>
+            This department is the most important department in this college....
+          </p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn btn-primary lowercase">Learn More</button>
           </div>
         </div>
       </div>
