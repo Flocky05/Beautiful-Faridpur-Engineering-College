@@ -1,12 +1,11 @@
 import React from "react";
-import Footer from "./Components/Shared/footer/footer";
-import Navbar from "./Components/Shared/Header/Navbar";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Router/Router";
 
 const App = () => {
   return (
     <div>
-      <Navbar></Navbar>
-      <Footer></Footer>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 };
