@@ -14,6 +14,8 @@ import img12 from "../assets/images/fec-12.jpg";
 import img13 from "../assets/images/fec-13.jpg";
 import img14 from "../assets/images/fec-14.jpg";
 import img15 from "../assets/images/fec-15.jpg";
+import img16 from "../assets/images/fec-16.jpg";
+import img17 from "../assets/images/fec-17.jpg";
 
 let images = [
   img1,
@@ -31,6 +33,8 @@ let images = [
   img13,
   img14,
   img15,
+  img16,
+  img17,
 ];
 const Gallery = () => {
   const [randomElements, setRandomElements] = useState([]);
@@ -44,7 +48,7 @@ const Gallery = () => {
       [copy[i], copy[j]] = [copy[j], copy[i]];
     }
     // Take the first 5 elements
-    let randomElements = copy.slice(0, 8);
+    let randomElements = copy.slice(0, 16);
     setRandomElements(randomElements);
   }, []);
 
@@ -57,6 +61,7 @@ const Gallery = () => {
             <img
               src={el}
               alt=""
+              className="w-full h-full object-cover "
               //   className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square"
             />
           ))}
