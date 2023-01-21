@@ -15,7 +15,24 @@ import img13 from "../assets/images/fec-13.jpg";
 import img14 from "../assets/images/fec-14.jpg";
 import img15 from "../assets/images/fec-15.jpg";
 import img16 from "../assets/images/fec-16.jpg";
-import img17 from "../assets/images/fec-17.jpg";
+import img17 from "../assets/images/fec-66.jpg";
+import img18 from "../assets/images/fec-17.jpg";
+import img19 from "../assets/images/fec-18.jpg";
+import img20 from "../assets/images/fec-19.jpg";
+import img21 from "../assets/images/fec-20.jpg";
+import img22 from "../assets/images/fec-21.jpg";
+import img23 from "../assets/images/fec-22.jpg";
+import img24 from "../assets/images/fec-23.jpg";
+import img25 from "../assets/images/fec-24.jpg";
+import img26 from "../assets/images/fec-25.jpg";
+import img27 from "../assets/images/fec-26.jpg";
+import img28 from "../assets/images/fec-27.jpg";
+import img29 from "../assets/images/fec-28.jpg";
+import img30 from "../assets/images/fec-29.jpg";
+import img31 from "../assets/images/fec-30.jpg";
+import img32 from "../assets/images/fec-31.jpg";
+import img33 from "../assets/images/fec-32.jpg";
+import img34 from "../assets/images/fec-33.jpg";
 
 let images = [
   img1,
@@ -35,6 +52,23 @@ let images = [
   img15,
   img16,
   img17,
+  img18,
+  img19,
+  img20,
+  img21,
+  img22,
+  img23,
+  img24,
+  img25,
+  img26,
+  img27,
+  img28,
+  img29,
+  img30,
+  img31,
+  img32,
+  img33,
+  img34,
 ];
 const Gallery = () => {
   const [randomElements, setRandomElements] = useState([]);
@@ -48,7 +82,7 @@ const Gallery = () => {
       [copy[i], copy[j]] = [copy[j], copy[i]];
     }
     // Take the first 5 elements
-    let randomElements = copy.slice(0, 16);
+    let randomElements = copy.slice(0, 32);
     setRandomElements(randomElements);
   }, []);
 

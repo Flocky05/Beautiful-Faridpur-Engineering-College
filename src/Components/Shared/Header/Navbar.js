@@ -40,7 +40,7 @@ const Navbar = () => {
                 <Link to="/Student">Studnet's</Link>
               </li>
               <li>
-                <Link to="/Gallary">Gallary</Link>
+                <Link to="/Gallary">Campus</Link>
               </li>
             </ul>
           </div>
