@@ -3,18 +3,19 @@ import HomePage from "../Components/Shared/HomePage/HomePage";
 import Main from "../Components/Shared/Main/Main";
 import Student from "../Components/Student/Student";
 import Teacher from "../Components/Teacher/Teacher";
+import Gallery from "../Gallary/Gallary";
 
 const { createBrowserRouter } = require("react-router-dom");
 
 export const router = createBrowserRouter([
   {
+    path: "/Department",
+    element: <Department></Department>,
+  },
+  {
     path: "/",
     element: <Main></Main>,
     children: [
-      {
-        path: "/Department",
-        element: <Department></Department>,
-      },
       {
         path: "/HomePage",
         element: <HomePage></HomePage>,
@@ -27,6 +28,14 @@ export const router = createBrowserRouter([
       {
         path: "/Student",
         element: <Student></Student>,
+      },
+      {
+        path: "/Department",
+        element: <Department></Department>,
+      },
+      {
+        path: "/Gallary",
+        element: <Gallery></Gallery>,
       },
     ],
   },
