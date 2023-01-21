@@ -15,86 +15,30 @@ import img13 from "../assets/images/fec-13.jpg";
 import img14 from "../assets/images/fec-14.jpg";
 import img15 from "../assets/images/fec-15.jpg";
 
+
+let images = [img1,img2,img3,img4,img5,img6, img7, img8, img9, img10,img11, img12, img13 , img14, img15];
 const Gallery = () => {
+  
+  let randomElements = [];
+
+for (let i = 0; i < 5; i++) {
+    let randomIndex = Math.floor(Math.random() * images.length);
+    randomElements.push(images[randomIndex]);
+    images.splice(randomIndex, 1);
+}
   return (
     <div>
       <section className="py-6 dark:text-gray-50">
         <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
-          <img
-            src={img1}
+    {
+    randomElements?.map(el=> <img
+            src={el}
             alt=""
             className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square"
-          />
-          <img
-            alt=""
-            className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img2}
-          />
-          <img
-            alt=""
-            className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img3}
-          />
-          <img
-            alt=""
-            className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img4}
-          />
-          <img
-            alt=""
-            className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img5}
-          />
-          <img
-            alt=""
-            className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img6}
-          />
-          <img
-            alt=""
-            className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img7}
-          />
-          <img
-            alt=""
-            className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img8}
-          />
-          <img
-            alt=""
-            className="w-full h-full rounded shadow-sm min-h-48 dark:bg-gray-500 aspect-square"
-            src={img9}
-          />
-          <img
-            src={img10}
-            alt=""
-            className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
-          />
-          <img
-            src={img11}
-            alt=""
-            className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
-          />
-          <img
-            src={img12}
-            alt=""
-            className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
-          />
-          <img
-            src={img13}
-            alt=""
-            className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
-          />
-          <img
-            src={img14}
-            alt=""
-            className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
-          />
-          <img
-            src={img15}
-            alt=""
-            className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
-          />
+          />)
+    }
+         
+
         </div>
       </section>
     </div>
