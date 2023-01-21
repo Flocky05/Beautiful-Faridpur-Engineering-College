@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../assets/images/fec-100.jpg";
 import img2 from "../assets/images/fec-111.jpg";
 import img3 from "../assets/images/fec-101.jpg";
@@ -15,30 +15,51 @@ import img13 from "../assets/images/fec-13.jpg";
 import img14 from "../assets/images/fec-14.jpg";
 import img15 from "../assets/images/fec-15.jpg";
 
-
-let images = [img1,img2,img3,img4,img5,img6, img7, img8, img9, img10,img11, img12, img13 , img14, img15];
+let images = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  img13,
+  img14,
+  img15,
+];
 const Gallery = () => {
-  
-  let randomElements = [];
+  const [randomElements, setRandomElements] = useState([]);
 
-for (let i = 0; i < 5; i++) {
-    let randomIndex = Math.floor(Math.random() * images.length);
-    randomElements.push(images[randomIndex]);
-    images.splice(randomIndex, 1);
-}
+  useEffect(() => {
+    // Copy the original array
+    let copy = images.slice();
+    // Shuffle the copy
+    for (let i = copy.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    // Take the first 5 elements
+    let randomElements = copy.slice(0, 8);
+    setRandomElements(randomElements);
+  }, []);
+
+  console.log(randomElements);
   return (
     <div>
       <section className="py-6 dark:text-gray-50">
         <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
-    {
-    randomElements?.map(el=> <img
-            src={el}
-            alt=""
-            className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square"
-          />)
-    }
-         
-
+          {randomElements?.map((el) => (
+            <img
+              src={el}
+              alt=""
+              //   className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-3 md:row-start-1 dark:bg-gray-500 aspect-square"
+            />
+          ))}
         </div>
       </section>
     </div>
