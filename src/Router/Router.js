@@ -1,3 +1,4 @@
+import Academy from "../academy/academy";
 import Department from "../Components/Department/Department";
 import HomePage from "../Components/Shared/HomePage/HomePage";
 import Main from "../Components/Shared/Main/Main";
@@ -8,10 +9,6 @@ import Gallery from "../Gallary/Gallary";
 const { createBrowserRouter } = require("react-router-dom");
 
 export const router = createBrowserRouter([
-  {
-    path: "/Department",
-    element: <Department></Department>,
-  },
   {
     path: "/",
     element: <Main></Main>,
@@ -36,6 +33,10 @@ export const router = createBrowserRouter([
       {
         path: "/Gallary",
         element: <Gallery></Gallery>,
+      },
+      {
+        path: "/Academy",
+        element: <Academy></Academy>,
       },
     ],
   },
