@@ -6,7 +6,7 @@ import Navbar from "../Header/Navbar";
 const Main = () => {
   return (
     <div>
-      <Navigate to={"/homepage"} />
+      <Navigate to={"/HomePage"} />
       <Navbar></Navbar>
       <Outlet></Outlet>
       <Footer></Footer>
